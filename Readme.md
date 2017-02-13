@@ -12,9 +12,10 @@ Image preprocessing was not heavily needed for this project as the individual "f
 I mirrored the images & respective labels along their vertical axis to generate more data for the network as well as to adjust for the left bias in track 1
 
 # Train / Validation Set
-I split out 10% of the data for the validation set during training
+I split out 10% of the data for the validation set during training. Overall the training / validation set is a good representation of the overall option set as seen below:
+![picture](data_analysis.png)
 
-# Model
+# Model Architecture Design
 The model I implemented is based on the Nvidia paper suggested in the lectures. The model is made up of several layers: a normalization layer followed by 5 convolutional layers that perform the feature extraction of the images. Each convolutional layer has a ReLU activation function. The feature map is then processed in 3 fully connected layers with ReLU activation inbetween which there is a dropout layer to prevent overfitting. The details of each layer can be seen in the picture below.
 ![picture](model.png)
 
